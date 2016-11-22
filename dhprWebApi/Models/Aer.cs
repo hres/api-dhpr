@@ -21,7 +21,7 @@ namespace dhprWebApi.Models
 		public long age_years { get; set; }
 		public int gender { get; set; }
 		public int weight { get; set; }
-		public string weightunit { get; set; }
+		public String weightunit { get; set; }
 		public int height { get; set; }
 		public String heightunit { get; set; }
 		public String reportoutcome { get; set; }
