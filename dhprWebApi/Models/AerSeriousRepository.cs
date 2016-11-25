@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-
+using dhprWebApi.AppCode;
 namespace dhprWebApi.Models
 {
     public class AerSeriousRepository : IAerSeriousRepository
