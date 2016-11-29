@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IAerLinkRepository databasePlaceholder = new AerLinkRepository();
 
-		public IEnumerable<AerLink> GetAllAerLink()
+		public IEnumerable<AerLink> GetAllAerLink(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public AerLink GetAerLinkById(int id)
+		public AerLink GetAerLinkById(int id, string lang)
 		{
-			AerLink aerlink = databasePlaceholder.Get(id);
+			AerLink aerlink = databasePlaceholder.Get(id, lang);
 			if (aerlink == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IAerSeriousRepository databasePlaceholder = new AerSeriousRepository();
 
-		public IEnumerable<AerSerious> GetAllAerSerious()
+		public IEnumerable<AerSerious> GetAllAerSerious(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public AerSerious GetAerSeriousById(int id)
+		public AerSerious GetAerSeriousById(int id, string lang)
 		{
-			AerSerious aerserious = databasePlaceholder.Get(id);
+			AerSerious aerserious = databasePlaceholder.Get(id, lang);
 			if (aerserious == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

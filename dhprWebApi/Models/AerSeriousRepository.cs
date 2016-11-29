@@ -11,15 +11,17 @@ namespace dhprWebApi.Models
         DBConnection dbConnection = new DBConnection("en");
 
 
-        public IEnumerable<AerSerious> GetAll()
+        public IEnumerable<AerSerious> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerseriouss = dbConnection.GetAllAerSerious();
 
             return aerseriouss;
         }
 
-        public AerSerious Get(int id)
+        public AerSerious Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerserious = dbConnection.GetAerSeriousById(id);
             return aerserious;
         }

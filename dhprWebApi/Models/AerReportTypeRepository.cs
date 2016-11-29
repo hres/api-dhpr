@@ -9,18 +9,17 @@ namespace dhprWebApi.Models
         private List<AerReportType> aerreporttypes = new List<AerReportType>();
         private AerReportType aerreporttype = new AerReportType();
 
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<AerReportType> GetAll()
+        public IEnumerable<AerReportType> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerreporttypes = dbConnection.GetAllAerReportType();
 
             return aerreporttypes;
         }
 
-        public AerReportType Get(int id)
+        public AerReportType Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerreporttype = dbConnection.GetAerReportTypeById(id);
             return aerreporttype;
         }

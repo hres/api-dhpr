@@ -7,19 +7,18 @@ namespace dhprWebApi.Models
        
         private List<Aer> aers = new List<Aer>();
         private Aer aer = new Aer();
-
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<Aer> GetAll()
+        
+        public IEnumerable<Aer> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aers = dbConnection.GetAllAer();
 
             return aers;
         }
 
-        public Aer Get(int id)
+        public Aer Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aer = dbConnection.GetAerById(id);
             return aer;
         }

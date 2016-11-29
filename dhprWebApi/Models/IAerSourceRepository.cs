@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
 {
     interface IAerSourceRepository
     {
-        IEnumerable<AerSource> GetAll();
-        AerSource Get(int id);
+        IEnumerable<AerSource> GetAll(string lang);
+        AerSource Get(int id, string lang);
     }
 }

@@ -7,19 +7,18 @@ namespace dhprWebApi.Models
        
         private List<AerIngredient> aeringredients = new List<AerIngredient>();
         private AerIngredient aeringredient = new AerIngredient();
-
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<AerIngredient> GetAll()
+        
+        public IEnumerable<AerIngredient> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aeringredients = dbConnection.GetAllAerIngredient();
 
             return aeringredients;
         }
 
-        public AerIngredient Get(int id)
+        public AerIngredient Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aeringredient = dbConnection.GetAerIngredientById(id);
             return aeringredient;
         }

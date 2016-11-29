@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IProductMonographRepository databasePlaceholder = new ProductMonographRepository();
 
-		public IEnumerable<ProductMonograph> GetAllProductMonograph()
+		public IEnumerable<ProductMonograph> GetAllProductMonograph(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public ProductMonograph GetProductMonographById(int id)
+		public ProductMonograph GetProductMonographById(int id, string lang)
 		{
-			ProductMonograph productmonograph = databasePlaceholder.Get(id);
+			ProductMonograph productmonograph = databasePlaceholder.Get(id, lang);
 			if (productmonograph == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

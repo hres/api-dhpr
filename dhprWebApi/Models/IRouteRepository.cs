@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
 {
     interface IRouteRepository
     {
-        IEnumerable<Route> GetAll();
-        Route Get(int id);
+        IEnumerable<Route> GetAll(string lang);
+        Route Get(int id, string lang);
     }
 }

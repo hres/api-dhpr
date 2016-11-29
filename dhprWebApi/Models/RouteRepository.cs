@@ -8,18 +8,17 @@ namespace dhprWebApi.Models
         private List<Route> routes = new List<Route>();
         private Route route = new Route();
 
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<Route> GetAll()
+        public IEnumerable<Route> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             routes = dbConnection.GetAllRoute();
 
             return routes;
         }
 
-        public Route Get(int id)
+        public Route Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             route = dbConnection.GetRouteById(id);
             return route;
         }

@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
 {
     interface IAerReactionTermsRepository
     {
-        IEnumerable<AerReactionTerms> GetAll();
-        AerReactionTerms Get(int id);
+        IEnumerable<AerReactionTerms> GetAll(string lang);
+        AerReactionTerms Get(int id, string lang);
     }
 }

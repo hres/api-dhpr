@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
 {
     interface IProductMonographRepository
     {
-        IEnumerable<ProductMonograph> GetAll();
-        ProductMonograph Get(int id);
+        IEnumerable<ProductMonograph> GetAll(string lang);
+        ProductMonograph Get(int id, string lang);
     }
 }

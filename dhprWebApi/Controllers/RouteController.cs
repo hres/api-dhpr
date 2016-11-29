@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IRouteRepository databasePlaceholder = new RouteRepository();
 
-		public IEnumerable<Route> GetAllRoute()
+		public IEnumerable<Route> GetAllRoute(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public Route GetRouteById(int id)
+		public Route GetRouteById(int id, string lang)
 		{
-			Route route = databasePlaceholder.Get(id);
+			Route route = databasePlaceholder.Get(id, lang);
 			if (route == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

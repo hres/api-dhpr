@@ -7,19 +7,18 @@ namespace dhprWebApi.Models
        
         private List<ProductMonograph> productmonographs = new List<ProductMonograph>();
         private ProductMonograph productmonograph = new ProductMonograph();
-
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<ProductMonograph> GetAll()
+        
+        public IEnumerable<ProductMonograph> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             productmonographs = dbConnection.GetAllProductMonograph();
 
             return productmonographs;
         }
 
-        public ProductMonograph Get(int id)
+        public ProductMonograph Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             productmonograph = dbConnection.GetProductMonographById(id);
             return productmonograph;
         }

@@ -8,18 +8,17 @@ namespace dhprWebApi.Models
         private List<Ci> cis = new List<Ci>();
         private Ci ci = new Ci();
 
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<Ci> GetAll()
+        public IEnumerable<Ci> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             cis = dbConnection.GetAllCi();
 
             return cis;
         }
 
-        public Ci Get(int id)
+        public Ci Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             ci = dbConnection.GetCiById(id);
             return ci;
         }

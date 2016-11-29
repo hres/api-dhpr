@@ -8,18 +8,17 @@ namespace dhprWebApi.Models
         private List<AerIndication> aerindications = new List<AerIndication>();
         private AerIndication aerindication = new AerIndication();
 
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<AerIndication> GetAll()
+        public IEnumerable<AerIndication> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerindications = dbConnection.GetAllAerIndication();
 
             return aerindications;
         }
 
-        public AerIndication Get(int id)
+        public AerIndication Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerindication = dbConnection.GetAerIndicationById(id);
             return aerindication;
         }

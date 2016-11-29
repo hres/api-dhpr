@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DhprWebApi.Models
+namespace dhprWebApi.Models
 {
     interface IAerGenderRepository
     {
-        IEnumerable<AerGender> GetAll();
-        AerGender Get(int id);
+        IEnumerable<AerGender> GetAll(string lang);
+        AerGender Get(int id, string lang);
     }
 }

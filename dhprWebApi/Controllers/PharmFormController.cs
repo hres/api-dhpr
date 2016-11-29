@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IPharmFormRepository databasePlaceholder = new PharmFormRepository();
 
-		public IEnumerable<PharmForm> GetAllPharmForm()
+		public IEnumerable<PharmForm> GetAllPharmForm(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public PharmForm GetPharmFormById(int id)
+		public PharmForm GetPharmFormById(int id, string lang)
 		{
-			PharmForm pharmform = databasePlaceholder.Get(id);
+			PharmForm pharmform = databasePlaceholder.Get(id, lang);
 			if (pharmform == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

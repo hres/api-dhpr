@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
 {
     interface IPharmFormRepository
     {
-        IEnumerable<PharmForm> GetAll();
-        PharmForm Get(int id);
+        IEnumerable<PharmForm> GetAll(string lang);
+        PharmForm Get(int id, string lang);
     }
 }

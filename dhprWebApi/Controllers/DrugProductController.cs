@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IDrugProductRepository databasePlaceholder = new DrugProductRepository();
 
-		public IEnumerable<DrugProduct> GetAllDrugProduct()
+		public IEnumerable<DrugProduct> GetAllDrugProduct(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public DrugProduct GetDrugProductById(int id)
+		public DrugProduct GetDrugProductById(int id, string lang)
 		{
-			DrugProduct drugproduct = databasePlaceholder.Get(id);
+			DrugProduct drugproduct = databasePlaceholder.Get(id, lang);
 			if (drugproduct == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

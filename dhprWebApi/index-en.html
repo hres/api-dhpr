@@ -96,35 +96,285 @@
                     <table class="wb-tables table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>
-                                    Request Type:
-                                </th>
-                                <th></th>
-                                <th>Format:</th>
+                                <th scope="col">Resource Name</th>
+                                <th scope="col">Format</th>
+                                <th scope="col">Language</th>
+                                <th scope="col">Link</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Active Gender -->
                             <tr>
-                                <td>Get All Company:</td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/company/?type=json">Json</a></td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/company/?type=xml">XML</a></td>
+                                <td>Active Gender</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aergender/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
                             </tr>
                             <tr>
-                                <td>Get All Product Monograph:</td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/productmonograph/?type=json">Json</a></td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/productmonograph/?type=xml">XML</a></td>
+                                <td>Active Gender</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aergender/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Active Ingredients -->
+                            <tr>
+                                <td>Active Ingredients</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/activeingredient/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
                             </tr>
                             <tr>
-                                <td>Get All Route:</td>
-                                <td><a class="btn btn-default" href="./api/route/?type=json">Json</a></td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/route/?type=xml">XML</a></td>
+                                <td>Active Ingredients</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/activeingredient/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer -->
+                            <tr>
+                                <td>Aer</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aer/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
                             </tr>
                             <tr>
-                                <td>Get All Route:</td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/route/?type=json">Json</a></td>
-                                <td><a class="btn btn-default" href="https://api.hres.ca/dhpr1/api/route/?type=xml">XML</a></td>
+                                <td>Aer</td>
+                                <td>JSON</td>
+                                <td>French</td>
+                                <td><a href="http://localhost:51195/api/aer/?lang=fr&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
                             </tr>
-                        </tbody>
+                            <tr>
+                                <td>Aer</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aer/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer</td>
+                                <td>XML</td>
+                                <td>French</td>
+                                <td><a href="http://localhost:51195/api/aer/?lang=fr&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Indication -->
+                            <tr>
+                                <td>Aer Indication</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerindication/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Indication</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerindication/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Ingredient -->
+                            <tr>
+                                <td>Aer Ingredient</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aeringredient/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Ingredient</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aeringredient/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Link -->
+                            <tr>
+                                <td>Aer Link</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerlink/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Link</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerlink/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Outcome -->
+                            <tr>
+                                <td>Aer Outcome</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aeroutcome/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Outcome</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aeroutcome/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Product Information -->
+                            <tr>
+                                <td>Aer Product Information</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerproductinformation/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Product Information</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerproductinformation/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Reaction Terms -->
+                            <tr>
+                                <td>Aer Reaction Terms</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerreactionterms/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Reaction Terms</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerreactionterms/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Report Type -->
+                            <tr>
+                                <td>Aer Report Type</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerreporttype/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Report Type</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerreporttype/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Serious -->
+                            <tr>
+                                <td>Aer Serious</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerserious/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Serious</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aerserious/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Source -->
+                            <tr>
+                                <td>Aer Source</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aersource/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Source</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aersource/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Brand Name -->
+                            <tr>
+                                <td>Brand Name</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/brandname/?type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Brand Name</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/brandname/?type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Ci -->
+                            <tr>
+                                <td>Ci</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/ci/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Ci</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/ci/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Company -->
+                            <tr>
+                                <td>Company</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/company/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Company</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/company/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Drug Product -->
+                            <tr>
+                                <td>Drug Product</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/drugproduct/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Drug Product</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/drugproduct/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Aer Gender -->
+                            <tr>
+                                <td>Aer Gender</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aergender/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Aer Gender</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/aergender/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Pharm Form -->
+                            <tr>
+                                <td>Pharm Form</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/pharmform/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Pharm Form</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/pharmform/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Product Monograph -->
+                            <tr>
+                                <td>Product Monograph</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/productmonograph/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Product Monograph</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/productmonograph/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <!-- Route -->
+                            <tr>
+                                <td>Route</td>
+                                <td>JSON</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/route/?lang=en&type=json" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Route</td>
+                                <td>XML</td>
+                                <td>English</td>
+                                <td><a href="http://localhost:51195/api/route/?lang=en&type=xml" title="Resource 1" class="resource-url-analytics btn btn-primary" target="_blank">Download</a></td>
+                            </tr>
                     </table>
 
                 </section>

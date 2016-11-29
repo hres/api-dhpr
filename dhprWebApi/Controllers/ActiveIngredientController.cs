@@ -8,16 +8,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IActiveIngredientRepository databasePlaceholder = new ActiveIngredientRepository();
 
-		public IEnumerable<ActiveIngredient> GetAllActiveIngredient()
+		public IEnumerable<ActiveIngredient> GetAllActiveIngredient(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public ActiveIngredient GetActiveIngredientById(int id)
+		public ActiveIngredient GetActiveIngredientById(int id, string lang)
 		{
-			ActiveIngredient activeingredient = databasePlaceholder.Get(id);
+			ActiveIngredient activeingredient = databasePlaceholder.Get(id, lang);
 			if (activeingredient == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IAerReportTypeRepository databasePlaceholder = new AerReportTypeRepository();
 
-		public IEnumerable<AerReportType> GetAllAerReportType()
+		public IEnumerable<AerReportType> GetAllAerReportType(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public AerReportType GetAerReportTypeById(int id)
+		public AerReportType GetAerReportTypeById(int id, string lang)
 		{
-			AerReportType aerreporttype = databasePlaceholder.Get(id);
+			AerReportType aerreporttype = databasePlaceholder.Get(id, lang);
 			if (aerreporttype == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

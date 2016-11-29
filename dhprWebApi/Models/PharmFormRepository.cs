@@ -8,18 +8,17 @@ namespace dhprWebApi.Models
         private List<PharmForm> pharmforms = new List<PharmForm>();
         private PharmForm pharmform = new PharmForm();
 
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<PharmForm> GetAll()
+        public IEnumerable<PharmForm> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             pharmforms = dbConnection.GetAllPharmForm();
 
             return pharmforms;
         }
 
-        public PharmForm Get(int id)
+        public PharmForm Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             pharmform = dbConnection.GetPharmFormById(id);
             return pharmform;
         }

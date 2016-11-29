@@ -8,18 +8,17 @@ namespace dhprWebApi.Models
         private List<AerOutcome> aeroutcomes = new List<AerOutcome>();
         private AerOutcome aeroutcome = new AerOutcome();
 
-        DBConnection dbConnection = new DBConnection("en");
-
-
-        public IEnumerable<AerOutcome> GetAll()
+        public IEnumerable<AerOutcome> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aeroutcomes = dbConnection.GetAllAerOutcome();
 
             return aeroutcomes;
         }
 
-        public AerOutcome Get(int id)
+        public AerOutcome Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aeroutcome = dbConnection.GetAerOutcomeById(id);
             return aeroutcome;
         }

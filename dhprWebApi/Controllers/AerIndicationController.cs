@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IAerIndicationRepository databasePlaceholder = new AerIndicationRepository();
 
-		public IEnumerable<AerIndication> GetAllAerIndication()
+		public IEnumerable<AerIndication> GetAllAerIndication(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public AerIndication GetAerIndicationById(int id)
+		public AerIndication GetAerIndicationById(int id, string lang)
 		{
-			AerIndication aerindication = databasePlaceholder.Get(id);
+			AerIndication aerindication = databasePlaceholder.Get(id, lang);
 			if (aerindication == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

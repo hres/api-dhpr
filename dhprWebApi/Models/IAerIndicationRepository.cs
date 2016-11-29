@@ -4,7 +4,7 @@ namespace dhprWebApi.Models
 {
     interface IAerIndicationRepository
     {
-        IEnumerable<AerIndication> GetAll();
-        AerIndication Get(int id);
+        IEnumerable<AerIndication> GetAll(string lang);
+        AerIndication Get(int id, string lang);
     }
 }

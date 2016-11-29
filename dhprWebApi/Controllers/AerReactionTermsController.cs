@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IAerReactionTermsRepository databasePlaceholder = new AerReactionTermsRepository();
 
-		public IEnumerable<AerReactionTerms> GetAllAerReactionTerms()
+		public IEnumerable<AerReactionTerms> GetAllAerReactionTerms(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public AerReactionTerms GetAerReactionTermsById(int id)
+		public AerReactionTerms GetAerReactionTermsById(int id, string lang)
 		{
-			AerReactionTerms aerreactionterms = databasePlaceholder.Get(id);
+			AerReactionTerms aerreactionterms = databasePlaceholder.Get(id, lang);
 			if (aerreactionterms == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

@@ -9,18 +9,20 @@ namespace dhprWebApi.Models
         private List<AerReactionTerms> aerreactiontermss = new List<AerReactionTerms>();
         private AerReactionTerms aerreactionterms = new AerReactionTerms();
 
-        DBConnection dbConnection = new DBConnection("en");
+        
 
 
-        public IEnumerable<AerReactionTerms> GetAll()
+        public IEnumerable<AerReactionTerms> GetAll(string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerreactiontermss = dbConnection.GetAllAerReactionTerms();
 
             return aerreactiontermss;
         }
 
-        public AerReactionTerms Get(int id)
+        public AerReactionTerms Get(int id, string lang)
         {
+            DBConnection dbConnection = new DBConnection(lang);
             aerreactionterms = dbConnection.GetAerReactionTermsById(id);
             return aerreactionterms;
         }

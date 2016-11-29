@@ -11,16 +11,16 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly ICiRepository databasePlaceholder = new CiRepository();
 
-		public IEnumerable<Ci> GetAllCi()
+		public IEnumerable<Ci> GetAllCi(string lang)
 		{
 
-			return databasePlaceholder.GetAll();
+			return databasePlaceholder.GetAll(lang);
 		}
 
 
-		public Ci GetCiById(int id)
+		public Ci GetCiById(int id, string lang)
 		{
-			Ci ci = databasePlaceholder.Get(id);
+			Ci ci = databasePlaceholder.Get(id, lang);
 			if (ci == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

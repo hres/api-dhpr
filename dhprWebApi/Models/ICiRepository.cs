@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
 {
     interface ICiRepository
     {
-        IEnumerable<Ci> GetAll();
-        Ci Get(int id);
+        IEnumerable<Ci> GetAll(string lang);
+        Ci Get(int id, string lang);
     }
 }

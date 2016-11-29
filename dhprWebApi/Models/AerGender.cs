@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DhprWebApi.Models
+namespace dhprWebApi.Models
 {
     public class AerGender
     {
