@@ -8,22 +8,22 @@ namespace dhprWebApi.Models
     public class AerProductInformation
     {
         public int id { get; set; }
-		public int reportdrugid { get; set; }
-		public int reportid { get; set; }
-		public int drugproductid { get; set; }
-		public String drugname { get; set; }
-		public String cvpname { get; set; }
-		public String dosageform { get; set; }
-		public String healthproductrole { get; set; }
-		public String routeofadministration { get; set; }
+		public int report_drug_id { get; set; }
+		public int report_id { get; set; }
+		public int drug_product_id { get; set; }
+		public String drug_name { get; set; }
+		public String cvp_name { get; set; }
+		public String dosage_form { get; set; }
+		public String health_product_role { get; set; }
+		public String route_of_administration { get; set; }
 		public long amount { get; set; }
-		public String amountunit { get; set; }
+		public String amount_unit { get; set; }
 		public int frequency { get; set; }
-		public int frequencytime { get; set; }
-		public String frequencytimeunit { get; set; }
-		public String frequencyunit { get; set; }
-		public int therapyduration { get; set; }
-		public String therapydurationunit { get; set; }
+		public int frequency_time { get; set; }
+		public String frequency_time_unit { get; set; }
+		public String frequency_unit { get; set; }
+		public int therapy_duration { get; set; }
+		public String therapy_duration_unit { get; set; }
 		public String language { get; set; }
 
     }
