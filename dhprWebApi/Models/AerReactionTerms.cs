@@ -8,12 +8,12 @@ namespace dhprWebApi.Models
     public class AerReactionTerms
     {
         public int id { get; set; }
-		public int reportid { get; set; }
-		public String adversereactionterms { get; set; }
-		public String meddrasystemorganclasssoc { get; set; }
-		public int reactionduration { get; set; }
-		public String reactiondurationunit { get; set; }
-		public String meddraversion { get; set; }
+		public int report_id { get; set; }
+		public String adverse_reaction_terms { get; set; }
+		public String meddra_system_organ_class_soc { get; set; }
+		public int reaction_duration { get; set; }
+		public String reaction_duration_unit { get; set; }
+		public String meddra_version { get; set; }
 		public String language { get; set; }
 
     }
