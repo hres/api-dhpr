@@ -8,9 +8,9 @@ namespace dhprWebApi.Models
     public class AerIndication
     {
         public int id { get; set; }
-		public int reportid { get; set; }
-		public int drugproductid { get; set; }
-		public String drugname { get; set; }
+		public int report_id { get; set; }
+		public int drug_product_id { get; set; }
+		public String drug_name { get; set; }
 		public String indication { get; set; }
 		public String language { get; set; }
 
