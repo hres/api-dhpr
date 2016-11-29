@@ -127,10 +127,10 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new AerIngredient();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.drugproductid = dr["DRUGPRODUCTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUGPRODUCTID"]);
-                                    item.drugname = dr["DRUGNAME"] == DBNull.Value ? string.Empty : dr["DRUGNAME"].ToString().Trim();
-                                    item.ingredientid = dr["INGREDIENTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["INGREDIENTID"]);
-                                    item.ingredientname = dr["INGREDIENTNAME"] == DBNull.Value ? string.Empty : dr["INGREDIENTNAME"].ToString().Trim();
+                                    item.drug_product_id = dr["DRUG_PRODUCT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUG_PRODUCT_ID"]);
+                                    item.drug_name = dr["DRUG_NAME"] == DBNull.Value ? string.Empty : dr["DRUG_NAME"].ToString().Trim();
+                                    item.ingredient_id = dr["INGREDIENT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["INGREDIENT_ID"]);
+                                    item.ingredient_name = dr["INGREDIENT_NAME"] == DBNull.Value ? string.Empty : dr["INGREDIENT_NAME"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
                                     items.Add(item);
@@ -171,10 +171,10 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.drugproductid = dr["DRUGPRODUCTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUGPRODUCTID"]);
-                                    item.drugname = dr["DRUGNAME"] == DBNull.Value ? string.Empty : dr["DRUGNAME"].ToString().Trim();
-                                    item.ingredientid = dr["INGREDIENTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["INGREDIENTID"]);
-                                    item.ingredientname = dr["INGREDIENTNAME"] == DBNull.Value ? string.Empty : dr["INGREDIENTNAME"].ToString().Trim();
+                                    item.drug_product_id = dr["DRUG_PRODUCT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUG_PRODUCT_ID"]);
+                                    item.drug_name = dr["DRUG_NAME"] == DBNull.Value ? string.Empty : dr["DRUG_NAME"].ToString().Trim();
+                                    item.ingredient_id = dr["INGREDIENT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["INGREDIENT_ID"]);
+                                    item.ingredient_name = dr["INGREDIENT_NAME"] == DBNull.Value ? string.Empty : dr["INGREDIENT_NAME"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
                                 }
                             }
@@ -213,12 +213,12 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new AerReactionTerms();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.adversereactionterms = dr["ADVERSEREACTIONTERMS"] == DBNull.Value ? string.Empty : dr["ADVERSEREACTIONTERMS"].ToString().Trim();
-                                    item.meddrasystemorganclasssoc = dr["MEDDRASYSTEMORGANCLASSSOC"] == DBNull.Value ? string.Empty : dr["MEDDRASYSTEMORGANCLASSSOC"].ToString().Trim();
-                                    item.reactionduration = dr["REACTIONDURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REACTIONDURATION"]);
-                                    item.reactiondurationunit = dr["REACTIONDURATIONUNIT"] == DBNull.Value ? string.Empty : dr["REACTIONDURATIONUNIT"].ToString().Trim();
-                                    item.meddraversion = dr["MEDDRAVERSION"] == DBNull.Value ? string.Empty : dr["MEDDRAVERSION"].ToString().Trim();
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.adverse_reaction_terms = dr["ADVERSE_REACTION_TERMS"] == DBNull.Value ? string.Empty : dr["ADVERSE_REACTION_TERMS"].ToString().Trim();
+                                    item.meddra_system_organ_class_soc = dr["MEDDRA_SYSTEM_ORGAN_CLASS_SOC"] == DBNull.Value ? string.Empty : dr["MEDDRA_SYSTEM_ORGAN_CLASS_SOC"].ToString().Trim();
+                                    item.reaction_duration = dr["REACTION_DURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REACTION_DURATION"]);
+                                    item.reaction_duration_unit = dr["REACTION_DURATION_UNIT"] == DBNull.Value ? string.Empty : dr["REACTION_DURATION_UNIT"].ToString().Trim();
+                                    item.meddra_version = dr["MEDDRA_VERSION"] == DBNull.Value ? string.Empty : dr["MEDDRA_VERSION"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
                                     items.Add(item);
@@ -259,12 +259,12 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.adversereactionterms = dr["ADVERSEREACTIONTERMS"] == DBNull.Value ? string.Empty : dr["ADVERSEREACTIONTERMS"].ToString().Trim();
-                                    item.meddrasystemorganclasssoc = dr["MEDDRASYSTEMORGANCLASSSOC"] == DBNull.Value ? string.Empty : dr["MEDDRASYSTEMORGANCLASSSOC"].ToString().Trim();
-                                    item.reactionduration = dr["REACTIONDURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REACTIONDURATION"].ToString().Trim());
-                                    item.reactiondurationunit = dr["REACTIONDURATIONUNIT"] == DBNull.Value ? string.Empty : dr["REACTIONDURATIONUNIT"].ToString().Trim();
-                                    item.meddraversion = dr["MEDDRAVERSION"] == DBNull.Value ? string.Empty : dr["MEDDRAVERSION"].ToString().Trim();
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.adverse_reaction_terms = dr["ADVERSE_REACTION_TERMS"] == DBNull.Value ? string.Empty : dr["ADVERSE_REACTION_TERMS"].ToString().Trim();
+                                    item.meddra_system_organ_class_soc = dr["MEDDRA_SYSTEM_ORGAN_CLASS_SOC"] == DBNull.Value ? string.Empty : dr["MEDDRA_SYSTEM_ORGAN_CLASS_SOC"].ToString().Trim();
+                                    item.reaction_duration = dr["REACTION_DURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REACTION_DURATION"].ToString().Trim());
+                                    item.reaction_duration_unit = dr["REACTION_DURATION_UNIT"] == DBNull.Value ? string.Empty : dr["REACTION_DURATION_UNIT"].ToString().Trim();
+                                    item.meddra_version = dr["MEDDRA_VERSION"] == DBNull.Value ? string.Empty : dr["MEDDRA_VERSION"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
                                 }
@@ -303,22 +303,22 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new AerProductInformation();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportdrugid = dr["REPORTDRUGID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTDRUGID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.drugproductid = dr["DRUGPRODUCTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUGPRODUCTID"]);
-                                    item.drugname = dr["DRUGNAME"] == DBNull.Value ? string.Empty : dr["DRUGNAME"].ToString().Trim();
-                                    item.cvpname = dr["CVPNAME"] == DBNull.Value ? string.Empty : dr["CVPNAME"].ToString().Trim();
-                                    item.dosageform = dr["DOSAGEFORM"] == DBNull.Value ? string.Empty : dr["DOSAGEFORM"].ToString().Trim();
-                                    item.healthproductrole = dr["HEALTHPRODUCTROLE"] == DBNull.Value ? string.Empty : dr["HEALTHPRODUCTROLE"].ToString().Trim();
-                                    item.routeofadministration = dr["ROUTEOFADMINISTRATION"] == DBNull.Value ? string.Empty : dr["ROUTEOFADMINISTRATION"].ToString().Trim();
+                                    item.report_drug_id = dr["REPORT_DRUG_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_DRUG_ID"]);
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.drug_product_id = dr["DRUG_PRODUCT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUG_PRODUCT_ID"]);
+                                    item.drug_name = dr["DRUG_NAME"] == DBNull.Value ? string.Empty : dr["DRUG_NAME"].ToString().Trim();
+                                    item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
+                                    item.dosage_form = dr["DOSAGE_FORM"] == DBNull.Value ? string.Empty : dr["DOSAGE_FORM"].ToString().Trim();
+                                    item.health_product_role = dr["HEALTH_PRODUCT_ROLE"] == DBNull.Value ? string.Empty : dr["HEALTH_PRODUCT_ROLE"].ToString().Trim();
+                                    item.route_of_administration = dr["ROUTE_OF_ADMINISTRATION"] == DBNull.Value ? string.Empty : dr["ROUTE_OF_ADMINISTRATION"].ToString().Trim();
                                     item.amount = dr["AMOUNT"] == DBNull.Value ? 0 : Convert.ToInt64(dr["AMOUNT"]);
-                                    item.amountunit = dr["AMOUNTUNIT"] == DBNull.Value ? string.Empty : dr["AMOUNTUNIT"].ToString().Trim();
+                                    item.amount_unit = dr["AMOUNT_UNIT"] == DBNull.Value ? string.Empty : dr["AMOUNT_UNIT"].ToString().Trim();
                                     item.frequency = dr["FREQUENCY"] == DBNull.Value ? 0 : Convert.ToInt32(dr["FREQUENCY"]);
-                                    item.frequencytime = dr["FREQUENCYTIME"] == DBNull.Value ? 0 : Convert.ToInt32(dr["FREQUENCYTIME"]);
-                                    item.frequencytimeunit = dr["FREQUENCYTIMEUNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCYTIMEUNIT"].ToString().Trim();
-                                    item.frequencyunit = dr["FREQUENCYUNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCYUNIT"].ToString().Trim();
-                                    item.therapyduration = dr["THERAPYDURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["THERAPYDURATION"]);
-                                    item.therapydurationunit = dr["THERAPYDURATIONUNIT"] == DBNull.Value ? string.Empty : dr["THERAPYDURATIONUNIT"].ToString().Trim();
+                                    item.frequency_time = dr["FREQUENCY_TIME"] == DBNull.Value ? 0 : Convert.ToInt32(dr["FREQUENCY_TIME"]);
+                                    item.frequency_time_unit = dr["FREQUENCY_TIME_UNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCY_TIME_UNIT"].ToString().Trim();
+                                    item.frequency_unit = dr["FREQUENCY_UNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCY_UNIT"].ToString().Trim();
+                                    item.therapy_duration = dr["THERAPY_DURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["THERAPY_DURATION"]);
+                                    item.therapy_duration_unit = dr["THERAPY_DURATION_UNIT"] == DBNull.Value ? string.Empty : dr["THERAPY_DURATION_UNIT"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
                                     items.Add(item);
@@ -359,22 +359,22 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportdrugid = dr["REPORTDRUGID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTDRUGID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.drugproductid = dr["DRUGPRODUCTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUGPRODUCTID"]);
-                                    item.drugname = dr["DRUGNAME"] == DBNull.Value ? string.Empty : dr["DRUGNAME"].ToString().Trim();
-                                    item.cvpname = dr["CVPNAME"] == DBNull.Value ? string.Empty : dr["CVPNAME"].ToString().Trim();
-                                    item.dosageform = dr["DOSAGEFORM"] == DBNull.Value ? string.Empty : dr["DOSAGEFORM"].ToString().Trim();
-                                    item.healthproductrole = dr["HEALTHPRODUCTROLE"] == DBNull.Value ? string.Empty : dr["HEALTHPRODUCTROLE"].ToString().Trim();
-                                    item.routeofadministration = dr["ROUTEOFADMINISTRATION"] == DBNull.Value ? string.Empty : dr["ROUTEOFADMINISTRATION"].ToString().Trim();
+                                    item.report_drug_id = dr["REPORT_DRUG_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_DRUG_ID"]);
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.drug_product_id = dr["DRUG_PRODUCT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUG_PRODUCT_ID"]);
+                                    item.drug_name = dr["DRUG_NAME"] == DBNull.Value ? string.Empty : dr["DRUG_NAME"].ToString().Trim();
+                                    item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
+                                    item.dosage_form = dr["DOSAGE_FORM"] == DBNull.Value ? string.Empty : dr["DOSAGE_FORM"].ToString().Trim();
+                                    item.health_product_role = dr["HEALTH_PRODUCT_ROLE"] == DBNull.Value ? string.Empty : dr["HEALTH_PRODUCT_ROLE"].ToString().Trim();
+                                    item.route_of_administration = dr["ROUTE_OF_ADMINISTRATION"] == DBNull.Value ? string.Empty : dr["ROUTE_OF_ADMINISTRATION"].ToString().Trim();
                                     item.amount = dr["AMOUNT"] == DBNull.Value ? 0 : Convert.ToInt64(dr["AMOUNT"]);
-                                    item.amountunit = dr["AMOUNTUNIT"] == DBNull.Value ? string.Empty : dr["AMOUNTUNIT"].ToString().Trim();
+                                    item.amount_unit = dr["AMOUNT_UNIT"] == DBNull.Value ? string.Empty : dr["AMOUNT_UNIT"].ToString().Trim();
                                     item.frequency = dr["FREQUENCY"] == DBNull.Value ? 0 : Convert.ToInt32(dr["FREQUENCY"]);
-                                    item.frequencytime = dr["FREQUENCYTIME"] == DBNull.Value ? 0 : Convert.ToInt32(dr["FREQUENCYTIME"]);
-                                    item.frequencytimeunit = dr["FREQUENCYTIMEUNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCYTIMEUNIT"].ToString().Trim();
-                                    item.frequencyunit = dr["FREQUENCYUNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCYUNIT"].ToString().Trim();
-                                    item.therapyduration = dr["THERAPYDURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["THERAPYDURATION"]);
-                                    item.therapydurationunit = dr["THERAPYDURATIONUNIT"] == DBNull.Value ? string.Empty : dr["THERAPYDURATIONUNIT"].ToString().Trim();
+                                    item.frequency_time = dr["FREQUENCY_TIME"] == DBNull.Value ? 0 : Convert.ToInt32(dr["FREQUENCY_TIME"]);
+                                    item.frequency_time_unit = dr["FREQUENCY_TIME_UNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCY_TIME_UNIT"].ToString().Trim();
+                                    item.frequency_unit = dr["FREQUENCY_UNIT"] == DBNull.Value ? string.Empty : dr["FREQUENCY_UNIT"].ToString().Trim();
+                                    item.therapy_duration = dr["THERAPY_DURATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["THERAPY_DURATION"]);
+                                    item.therapy_duration_unit = dr["THERAPY_DURATION_UNIT"] == DBNull.Value ? string.Empty : dr["THERAPY_DURATION_UNIT"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
                                 }
@@ -413,19 +413,19 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new Ci();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.ci_usedfor = dr["CI_USEDFOR"] == DBNull.Value ? string.Empty : dr["CI_USEDFOR"].ToString().Trim();
-                                    item.ci_whatitdoes = dr["CI_WHATITDOES"] == DBNull.Value ? string.Empty : dr["CI_WHATITDOES"].ToString().Trim();
-                                    item.ci_whennotused = dr["CI_WHENNOTUSED"] == DBNull.Value ? string.Empty : dr["CI_WHENNOTUSED"].ToString().Trim();
-                                    item.ci_medicinalingredients = dr["CI_MEDICINALINGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_MEDICINALINGREDIENTS"].ToString().Trim();
-                                    item.ci_nonmedicinalingredients = dr["CI_NONMEDICINALINGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_NONMEDICINALINGREDIENTS"].ToString().Trim();
+                                    item.ci_used_for = dr["CI_USED_FOR"] == DBNull.Value ? string.Empty : dr["CI_USED_FOR"].ToString().Trim();
+                                    item.ci_what_it_does = dr["CI_WHAT_IT_DOES"] == DBNull.Value ? string.Empty : dr["CI_WHAT_IT_DOES"].ToString().Trim();
+                                    item.ci_whennotused = dr["CI_WHEN_NOT_USED"] == DBNull.Value ? string.Empty : dr["CI_WHEN_NOT_USED"].ToString().Trim();
+                                    item.ci_medicinal_ingredients = dr["CI_MEDICINAL_INGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_MEDICINAL_INGREDIENTS"].ToString().Trim();
+                                    item.ci_nonmedicinal_ingredients = dr["CI_NONMEDICINAL_INGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_NONMEDICINAL_INGREDIENTS"].ToString().Trim();
                                     item.ci_dosage = dr["CI_DOSAGE"] == DBNull.Value ? string.Empty : dr["CI_DOSAGE"].ToString().Trim();
                                     item.ci_warnings = dr["CI_WARNINGS"] == DBNull.Value ? string.Empty : dr["CI_WARNINGS"].ToString().Trim();
                                     item.ci_interactions = dr["CI_INTERACTIONS"] == DBNull.Value ? string.Empty : dr["CI_INTERACTIONS"].ToString().Trim();
-                                    item.ci_properuse = dr["CI_PROPERUSE"] == DBNull.Value ? string.Empty : dr["CI_PROPERUSE"].ToString().Trim();
-                                    item.ci_sideeffects = dr["CI_SIDEEFFECTS"] == DBNull.Value ? string.Empty : dr["CI_SIDEEFFECTS"].ToString().Trim();
+                                    item.ci_proper_use = dr["CI_PROPER_USE"] == DBNull.Value ? string.Empty : dr["CI_PROPER_USE"].ToString().Trim();
+                                    item.ci_side_effects = dr["CI_SIDE_EFFECTS"] == DBNull.Value ? string.Empty : dr["CI_SIDE_EFFECTS"].ToString().Trim();
                                     item.ci_storage = dr["CI_STORAGE"] == DBNull.Value ? string.Empty : dr["CI_STORAGE"].ToString().Trim();
-                                    item.ci_reportingsideeffects = dr["CI_REPORTINGSIDEEFFECTS"] == DBNull.Value ? string.Empty : dr["CI_REPORTINGSIDEEFFECTS"].ToString().Trim();
-                                    item.ci_moreinfo = dr["CI_MOREINFO"] == DBNull.Value ? string.Empty : dr["CI_MOREINFO"].ToString().Trim();
+                                    item.ci_reporting_side_effects = dr["CI_REPORTING_SIDE_EFFECTS"] == DBNull.Value ? string.Empty : dr["CI_REPORTING_SIDE_EFFECTS"].ToString().Trim();
+                                    item.ci_more_info = dr["CI_MORE_INFO"] == DBNull.Value ? string.Empty : dr["CI_MORE_INFO"].ToString().Trim();
                                     item.ci_language = dr["CI_LANGUAGE"] == DBNull.Value ? string.Empty : dr["CI_LANGUAGE"].ToString().Trim();
                                     item.ci_id = dr["CI_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CI_ID"]);
                                     item.product_monograph_id = dr["PRODUCT_MONOGRAPH_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["PRODUCT_MONOGRAPH_ID"]);
@@ -468,19 +468,19 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.ci_usedfor = dr["CI_USEDFOR"] == DBNull.Value ? string.Empty : dr["CI_USEDFOR"].ToString().Trim();
-                                    item.ci_whatitdoes = dr["CI_WHATITDOES"] == DBNull.Value ? string.Empty : dr["CI_WHATITDOES"].ToString().Trim();
-                                    item.ci_whennotused = dr["CI_WHENNOTUSED"] == DBNull.Value ? string.Empty : dr["CI_WHENNOTUSED"].ToString().Trim();
-                                    item.ci_medicinalingredients = dr["CI_MEDICINALINGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_MEDICINALINGREDIENTS"].ToString().Trim();
-                                    item.ci_nonmedicinalingredients = dr["CI_NONMEDICINALINGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_NONMEDICINALINGREDIENTS"].ToString().Trim();
+                                    item.ci_used_for = dr["CI_USED_FOR"] == DBNull.Value ? string.Empty : dr["CI_USED_FOR"].ToString().Trim();
+                                    item.ci_what_it_does = dr["CI_WHAT_IT_DOES"] == DBNull.Value ? string.Empty : dr["CI_WHAT_IT_DOES"].ToString().Trim();
+                                    item.ci_whennotused = dr["CI_WHEN_NOT_USED"] == DBNull.Value ? string.Empty : dr["CI_WHEN_NOT_USED"].ToString().Trim();
+                                    item.ci_medicinal_ingredients = dr["CI_MEDICINAL_INGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_MEDICINAL_INGREDIENTS"].ToString().Trim();
+                                    item.ci_nonmedicinal_ingredients = dr["CI_NONMEDICINAL_INGREDIENTS"] == DBNull.Value ? string.Empty : dr["CI_NONMEDICINAL_INGREDIENTS"].ToString().Trim();
                                     item.ci_dosage = dr["CI_DOSAGE"] == DBNull.Value ? string.Empty : dr["CI_DOSAGE"].ToString().Trim();
                                     item.ci_warnings = dr["CI_WARNINGS"] == DBNull.Value ? string.Empty : dr["CI_WARNINGS"].ToString().Trim();
                                     item.ci_interactions = dr["CI_INTERACTIONS"] == DBNull.Value ? string.Empty : dr["CI_INTERACTIONS"].ToString().Trim();
-                                    item.ci_properuse = dr["CI_PROPERUSE"] == DBNull.Value ? string.Empty : dr["CI_PROPERUSE"].ToString().Trim();
-                                    item.ci_sideeffects = dr["CI_SIDEEFFECTS"] == DBNull.Value ? string.Empty : dr["CI_SIDEEFFECTS"].ToString().Trim();
+                                    item.ci_proper_use = dr["CI_PROPER_USE"] == DBNull.Value ? string.Empty : dr["CI_PROPER_USE"].ToString().Trim();
+                                    item.ci_side_effects = dr["CI_SIDE_EFFECTS"] == DBNull.Value ? string.Empty : dr["CI_SIDE_EFFECTS"].ToString().Trim();
                                     item.ci_storage = dr["CI_STORAGE"] == DBNull.Value ? string.Empty : dr["CI_STORAGE"].ToString().Trim();
-                                    item.ci_reportingsideeffects = dr["CI_REPORTINGSIDEEFFECTS"] == DBNull.Value ? string.Empty : dr["CI_REPORTINGSIDEEFFECTS"].ToString().Trim();
-                                    item.ci_moreinfo = dr["CI_MOREINFO"] == DBNull.Value ? string.Empty : dr["CI_MOREINFO"].ToString().Trim();
+                                    item.ci_reporting_side_effects = dr["CI_REPORTING_SIDE_EFFECTS"] == DBNull.Value ? string.Empty : dr["CI_REPORTING_SIDE_EFFECTS"].ToString().Trim();
+                                    item.ci_more_info = dr["CI_MORE_INFO"] == DBNull.Value ? string.Empty : dr["CI_MORE_INFO"].ToString().Trim();
                                     item.ci_language = dr["CI_LANGUAGE"] == DBNull.Value ? string.Empty : dr["CI_LANGUAGE"].ToString().Trim();
                                     item.ci_id = dr["CI_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CI_ID"]);
                                     item.product_monograph_id = dr["PRODUCT_MONOGRAPH_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["PRODUCT_MONOGRAPH_ID"]);
@@ -602,7 +602,7 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new AerLink();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
                                     item.type = dr["TYPE"] == DBNull.Value ? string.Empty : dr["TYPE"].ToString().Trim();
                                     item.linked_aer_number = dr["LINKED_AER_NUMBER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LINKED_AER_NUMBER"]);
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
@@ -645,7 +645,7 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
                                     item.type = dr["TYPE"] == DBNull.Value ? string.Empty : dr["TYPE"].ToString().Trim();
                                     item.linked_aer_number = dr["LINKED_AER_NUMBER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LINKED_AER_NUMBER"]);
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
@@ -1200,33 +1200,33 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new Aer();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.latestaerversionnumber = dr["LATESTAERVERSIONNUMBER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LATESTAERVERSIONNUMBER"]);
-                                    item.marketauthorizationholderaernumber = dr["MARKETAUTHORIZATIONHOLDERAERNUMBER"] == DBNull.Value ? string.Empty : dr["MARKETAUTHORIZATIONHOLDERAERNUMBER"].ToString().Trim();
-                                    item.initialreceiveddate = dr["INITIALRECEIVEDDATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["INITIALRECEIVEDDATE"]);
-                                    item.latestreceiveddate = dr["LATESTRECEIVEDDATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["LATESTRECEIVEDDATE"]);
-                                    item.typeofreport = dr["TYPEOFREPORT"] == DBNull.Value ? string.Empty : dr["TYPEOFREPORT"].ToString().Trim();
-                                    item.seriousreport = dr["SERIOUSREPORT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["SERIOUSREPORT"]);
-                                    item.agegroup = dr["AGEGROUP"] == DBNull.Value ? string.Empty : dr["AGEGROUP"].ToString().Trim();
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.latest_aer_version_number = dr["LATEST_AER_VERSION_NUMBER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LATEST_AER_VERSION_NUMBER"]);
+                                    item.market_authorization_holder_aer_number = dr["MARKET_AUTHORIZATION_HOLDER_AER_NUMBER"] == DBNull.Value ? string.Empty : dr["MARKET_AUTHORIZATION_HOLDER_AER_NUMBER"].ToString().Trim();
+                                    item.initial_received_date = dr["INITIAL_RECEIVED_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["INITIAL_RECEIVED_DATE"]);
+                                    item.latest_received_date = dr["LATEST_RECEIVED_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["LATEST_RECEIVED_DATE"]);
+                                    item.type_of_report = dr["TYPE_OF_REPORT"] == DBNull.Value ? string.Empty : dr["TYPE_OF_REPORT"].ToString().Trim();
+                                    item.serious_report = dr["SERIOUS_REPORT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["SERIOUS_REPORT"]);
+                                    item.age_group = dr["AGE_GROUP"] == DBNull.Value ? string.Empty : dr["AGE_GROUP"].ToString().Trim();
                                     item.age = dr["AGE"] == DBNull.Value ? 0 : Convert.ToInt32(dr["AGE"]);
-                                    item.ageunit = dr["AGEUNIT"] == DBNull.Value ? string.Empty : dr["AGEUNIT"].ToString().Trim();
+                                    item.age_unit = dr["AGE_UNIT"] == DBNull.Value ? string.Empty : dr["AGE_UNIT"].ToString().Trim();
                                     item.age_years = dr["AGE_YEARS"] == DBNull.Value ? 0 : Convert.ToInt64(dr["AGE_YEARS"]);
                                     item.gender = dr["GENDER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["GENDER"]);
                                     item.weight = dr["WEIGHT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["WEIGHT"]);
-                                    item.weightunit = dr["WEIGHTUNIT"] == DBNull.Value ? string.Empty : dr["WEIGHTUNIT"].ToString().Trim();
+                                    item.weight_unit = dr["WEIGHT_UNIT"] == DBNull.Value ? string.Empty : dr["WEIGHT_UNIT"].ToString().Trim();
                                     item.height = dr["HEIGHT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["HEIGHT"]);
-                                    item.heightunit = dr["HEIGHTUNIT"] == DBNull.Value ? string.Empty : dr["HEIGHTUNIT"].ToString().Trim();
-                                    item.reportoutcome = dr["REPORTOUTCOME"] == DBNull.Value ? string.Empty : dr["REPORTOUTCOME"].ToString().Trim();
-                                    item.reportertype = dr["REPORTERTYPE"] == DBNull.Value ? string.Empty : dr["REPORTERTYPE"].ToString().Trim();
-                                    item.sourceofreport = dr["SOURCEOFREPORT"] == DBNull.Value ? string.Empty : dr["SOURCEOFREPORT"].ToString().Trim();
-                                    item.death = dr["DEATH"] == DBNull.Value ? 0 : Convert.ToInt16(dr["DEATH"]);
-                                    item.disability = dr["DISABILITY"] == DBNull.Value ? 0 : Convert.ToInt16(dr["DISABILITY"]);
-                                    item.congenitalanomaly = dr["CONGENITALANOMALY"] == DBNull.Value ? 0 : Convert.ToInt16(dr["CONGENITALANOMALY"]);
-                                    item.lifethreatening = dr["LIFETHREATENING"] == DBNull.Value ? 0 : Convert.ToInt16(dr["LIFETHREATENING"]);
-                                    item.hospitalization = dr["HOSPITALIZATION"] == DBNull.Value ? 0 : Convert.ToInt16(dr["HOSPITALIZATION"]);
-                                    item.othermedicallyimportantconditions = dr["OTHERMEDICALLYIMPORTANTCONDITIONS"] == DBNull.Value ? string.Empty : dr["OTHERMEDICALLYIMPORTANTCONDITIONS"].ToString().Trim();
-                                    item.recordtype = dr["RECORDTYPE"] == DBNull.Value ? string.Empty : dr["RECORDTYPE"].ToString().Trim();
-                                    item.linkaernumber = dr["LINKAERNUMBER"] == DBNull.Value ? string.Empty : dr["LINKAERNUMBER"].ToString().Trim();
+                                    item.height_unit = dr["HEIGHT_UNIT"] == DBNull.Value ? string.Empty : dr["HEIGHT_UNIT"].ToString().Trim();
+                                    item.report_outcome = dr["REPORT_OUTCOME"] == DBNull.Value ? string.Empty : dr["REPORT_OUTCOME"].ToString().Trim();
+                                    item.reporter_type = dr["REPORTER_TYPE"] == DBNull.Value ? string.Empty : dr["REPORTER_TYPE"].ToString().Trim();
+                                    item.source_of_report = dr["SOURCE_OF_REPORT"] == DBNull.Value ? string.Empty : dr["SOURCE_OF_REPORT"].ToString().Trim();
+                                    item.death = dr["DEATH"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DEATH"]);
+                                    item.disability = dr["DISABILITY"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DISABILITY"]);
+                                    item.congenital_anomaly = dr["CONGENITAL_ANOMALY"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CONGENITAL_ANOMALY"]);
+                                    item.life_threatening = dr["LIFE_THREATENING"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LIFE_THREATENING"]);
+                                    item.hospitalization = dr["HOSPITALIZATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["HOSPITALIZATION"]);
+                                    item.other_medically_important_conditions = dr["OTHER_MEDICALLY_IMPORTANT_CONDITIONS"] == DBNull.Value ? string.Empty : dr["OTHER_MEDICALLY_IMPORTANT_CONDITIONS"].ToString().Trim();
+                                    item.record_type = dr["RECORD_TYPE"] == DBNull.Value ? string.Empty : dr["RECORD_TYPE"].ToString().Trim();
+                                    item.link_aer_number = dr["LINK_AER_NUMBER"] == DBNull.Value ? string.Empty : dr["LINK_AER_NUMBER"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
                                     items.Add(item);
@@ -1267,33 +1267,33 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.latestaerversionnumber = dr["LATESTAERVERSIONNUMBER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LATESTAERVERSIONNUMBER"]);
-                                    item.marketauthorizationholderaernumber = dr["MARKETAUTHORIZATIONHOLDERAERNUMBER"] == DBNull.Value ? string.Empty : dr["MARKETAUTHORIZATIONHOLDERAERNUMBER"].ToString().Trim();
-                                    item.initialreceiveddate = dr["INITIALRECEIVEDDATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["INITIALRECEIVEDDATE"]);
-                                    item.latestreceiveddate = dr["LATESTRECEIVEDDATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["LATESTRECEIVEDDATE"]);
-                                    item.typeofreport = dr["TYPEOFREPORT"] == DBNull.Value ? string.Empty : dr["TYPEOFREPORT"].ToString().Trim();
-                                    item.seriousreport = dr["SERIOUSREPORT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["SERIOUSREPORT"]);
-                                    item.agegroup = dr["AGEGROUP"] == DBNull.Value ? string.Empty : dr["AGEGROUP"].ToString().Trim();
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.latest_aer_version_number = dr["LATEST_AER_VERSION_NUMBER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LATEST_AER_VERSION_NUMBER"]);
+                                    item.market_authorization_holder_aer_number = dr["MARKET_AUTHORIZATION_HOLDER_AER_NUMBER"] == DBNull.Value ? string.Empty : dr["MARKET_AUTHORIZATION_HOLDER_AER_NUMBER"].ToString().Trim();
+                                    item.initial_received_date = dr["INITIAL_RECEIVED_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["INITIAL_RECEIVED_DATE"]);
+                                    item.latest_received_date = dr["LATEST_RECEIVED_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["LATEST_RECEIVED_DATE"]);
+                                    item.type_of_report = dr["TYPE_OF_REPORT"] == DBNull.Value ? string.Empty : dr["TYPE_OF_REPORT"].ToString().Trim();
+                                    item.serious_report = dr["SERIOUS_REPORT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["SERIOUS_REPORT"]);
+                                    item.age_group = dr["AGE_GROUP"] == DBNull.Value ? string.Empty : dr["AGE_GROUP"].ToString().Trim();
                                     item.age = dr["AGE"] == DBNull.Value ? 0 : Convert.ToInt32(dr["AGE"]);
-                                    item.ageunit = dr["AGEUNIT"] == DBNull.Value ? string.Empty : dr["AGEUNIT"].ToString().Trim();
+                                    item.age_unit = dr["AGE_UNIT"] == DBNull.Value ? string.Empty : dr["AGE_UNIT"].ToString().Trim();
                                     item.age_years = dr["AGE_YEARS"] == DBNull.Value ? 0 : Convert.ToInt64(dr["AGE_YEARS"]);
                                     item.gender = dr["GENDER"] == DBNull.Value ? 0 : Convert.ToInt32(dr["GENDER"]);
                                     item.weight = dr["WEIGHT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["WEIGHT"]);
-                                    item.weightunit = dr["WEIGHTUNIT"] == DBNull.Value ? string.Empty : dr["WEIGHTUNIT"].ToString().Trim();
+                                    item.weight_unit = dr["WEIGHT_UNIT"] == DBNull.Value ? string.Empty : dr["WEIGHT_UNIT"].ToString().Trim();
                                     item.height = dr["HEIGHT"] == DBNull.Value ? 0 : Convert.ToInt32(dr["HEIGHT"]);
-                                    item.heightunit = dr["HEIGHTUNIT"] == DBNull.Value ? string.Empty : dr["HEIGHTUNIT"].ToString().Trim();
-                                    item.reportoutcome = dr["REPORTOUTCOME"] == DBNull.Value ? string.Empty : dr["REPORTOUTCOME"].ToString().Trim();
-                                    item.reportertype = dr["REPORTERTYPE"] == DBNull.Value ? string.Empty : dr["REPORTERTYPE"].ToString().Trim();
-                                    item.sourceofreport = dr["SOURCEOFREPORT"] == DBNull.Value ? string.Empty : dr["SOURCEOFREPORT"].ToString().Trim();
-                                    item.death = dr["DEATH"] == DBNull.Value ? 0 : Convert.ToInt16(dr["DEATH"]);
-                                    item.disability = dr["DISABILITY"] == DBNull.Value ? 0 : Convert.ToInt16(dr["DISABILITY"]);
-                                    item.congenitalanomaly = dr["CONGENITALANOMALY"] == DBNull.Value ? 0 : Convert.ToInt16(dr["CONGENITALANOMALY"]);
-                                    item.lifethreatening = dr["LIFETHREATENING"] == DBNull.Value ? 0 : Convert.ToInt16(dr["LIFETHREATENING"]);
-                                    item.hospitalization = dr["HOSPITALIZATION"] == DBNull.Value ? 0 : Convert.ToInt16(dr["HOSPITALIZATION"]);
-                                    item.othermedicallyimportantconditions = dr["OTHERMEDICALLYIMPORTANTCONDITIONS"] == DBNull.Value ? string.Empty : dr["OTHERMEDICALLYIMPORTANTCONDITIONS"].ToString().Trim();
-                                    item.recordtype = dr["RECORDTYPE"] == DBNull.Value ? string.Empty : dr["RECORDTYPE"].ToString().Trim();
-                                    item.linkaernumber = dr["LINKAERNUMBER"] == DBNull.Value ? string.Empty : dr["LINKAERNUMBER"].ToString().Trim();
+                                    item.height_unit = dr["HEIGHT_UNIT"] == DBNull.Value ? string.Empty : dr["HEIGHT_UNIT"].ToString().Trim();
+                                    item.report_outcome = dr["REPORT_OUTCOME"] == DBNull.Value ? string.Empty : dr["REPORT_OUTCOME"].ToString().Trim();
+                                    item.reporter_type = dr["REPORTER_TYPE"] == DBNull.Value ? string.Empty : dr["REPORTER_TYPE"].ToString().Trim();
+                                    item.source_of_report = dr["SOURCE_OF_REPORT"] == DBNull.Value ? string.Empty : dr["SOURCE_OF_REPORT"].ToString().Trim();
+                                    item.death = dr["DEATH"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DEATH"]);
+                                    item.disability = dr["DISABILITY"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DISABILITY"]);
+                                    item.congenital_anomaly = dr["CONGENITAL_ANOMALY"] == DBNull.Value ? 0 : Convert.ToInt32(dr["CONGENITAL_ANOMALY"]);
+                                    item.life_threatening = dr["LIFE_THREATENING"] == DBNull.Value ? 0 : Convert.ToInt32(dr["LIFE_THREATENING"]);
+                                    item.hospitalization = dr["HOSPITALIZATION"] == DBNull.Value ? 0 : Convert.ToInt32(dr["HOSPITALIZATION"]);
+                                    item.other_medically_important_conditions = dr["OTHER_MEDICALLY_IMPORTANT_CONDITIONS"] == DBNull.Value ? string.Empty : dr["OTHER_MEDICALLY_IMPORTANT_CONDITIONS"].ToString().Trim();
+                                    item.record_type = dr["RECORD_TYPE"] == DBNull.Value ? string.Empty : dr["RECORD_TYPE"].ToString().Trim();
+                                    item.link_aer_number = dr["LINK_AER_NUMBER"] == DBNull.Value ? string.Empty : dr["LINK_AER_NUMBER"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
                                 }
                             }
@@ -1415,9 +1415,9 @@ namespace dhprWebApi.AppCode
                                 {
                                     var item = new AerIndication();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.drugproductid = dr["DRUGPRODUCTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUGPRODUCTID"]);
-                                    item.drugname = dr["DRUGNAME"] == DBNull.Value ? string.Empty : dr["DRUGNAME"].ToString().Trim();
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.drug_product_id = dr["DRUG_PRODUCT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUG_PRODUCT_ID"]);
+                                    item.drug_name = dr["DRUG_NAME"] == DBNull.Value ? string.Empty : dr["DRUG_NAME"].ToString().Trim();
                                     item.indication = dr["INDICATION"] == DBNull.Value ? string.Empty : dr["INDICATION"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
@@ -1459,9 +1459,9 @@ namespace dhprWebApi.AppCode
                                 while (dr.Read())
                                 {
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.reportid = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
-                                    item.drugproductid = dr["DRUGPRODUCTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUGPRODUCTID"]);
-                                    item.drugname = dr["DRUGNAME"] == DBNull.Value ? string.Empty : dr["DRUGNAME"].ToString().Trim();
+                                    item.report_id = dr["REPORT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORT_ID"]);
+                                    item.drug_product_id = dr["DRUG_PRODUCT_ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["DRUG_PRODUCT_ID"]);
+                                    item.drug_name = dr["DRUG_NAME"] == DBNull.Value ? string.Empty : dr["DRUG_NAME"].ToString().Trim();
                                     item.indication = dr["INDICATION"] == DBNull.Value ? string.Empty : dr["INDICATION"].ToString().Trim();
                                     item.language = dr["LANGUAGE"] == DBNull.Value ? string.Empty : dr["LANGUAGE"].ToString().Trim();
 
