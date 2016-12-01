@@ -1981,13 +1981,13 @@ namespace dhprWebApi.AppCode
                             {
                                 while (dr.Read())
                                 {
-                                    var item = new Xref();
-                                    item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
-                                    item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
-									item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
+                                    	var item = new Xref();
+                                    	item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
+                                    	item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
+                                    	item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
+					item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
 
-                                    items.Add(item);
+                                    	items.Add(item);
                                 }
                             }
                         }
@@ -2031,10 +2031,10 @@ namespace dhprWebApi.AppCode
                             {
                                 while (dr.Read())
                                 {
-                                    item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
-                                    item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
-                                    item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
-									item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
+                                	item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
+                                	item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
+                                    	item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
+					item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
                                 }
                             }
                         }
