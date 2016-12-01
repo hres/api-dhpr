@@ -11,16 +11,15 @@ namespace dhprWebApi.Controllers
 	{
 		static readonly IXrefRepository databasePlaceholder = new XrefRepository();
 
-		public IEnumerable<Xref> GetAllXref(string lang)
+		public IEnumerable<Xref> GetAllXref()
 		{
-
-			return databasePlaceholder.GetAll(lang);
+            return databasePlaceholder.GetAll();
 		}
 
 
-		public Xref GetXrefById(int id, string lang)
+		public Xref GetXrefById(int id)
 		{
-			Xref xref = databasePlaceholder.Get(id, lang);
+			Xref xref = databasePlaceholder.Get(id);
 			if (xref == null)
 			{
 				throw new HttpResponseException(HttpStatusCode.NotFound);

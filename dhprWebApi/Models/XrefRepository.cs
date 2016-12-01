@@ -7,18 +7,17 @@ namespace dhprWebApi.Models
        
         private List<Xref> xrefs = new List<Xref>();
         private Xref xref = new Xref();
-        
-        public IEnumerable<Xref> GetAll(string lang)
+        DBConnection dbConnection = new DBConnection("en");
+        public IEnumerable<Xref> GetAll()
         {
-            DBConnection dbConnection = new DBConnection(lang);
-            xrefs = dbConnection.GetAllXref();
+           xrefs = dbConnection.GetAllXref();
 
             return xrefs;
         }
 
-        public Xref Get(int id, string lang)
+        public Xref Get(int id)
         {
-            DBConnection dbConnection = new DBConnection(lang);
+
             xref = dbConnection.GetXrefById(id);
             return xref;
         }

@@ -1962,13 +1962,7 @@ namespace dhprWebApi.AppCode
         {
             var items = new List<Xref>();
             string commandText = "SELECT DISTINCT * FROM XREF";
-            if (this.Lang.Equals("fr"))
-            {
-                commandText += " WHERE LANGUAGE = 'fr'";
-            }
-            else {
-                commandText += " WHERE LANGUAGE ='en'";
-            }
+           
             using (NpgsqlConnection con = new NpgsqlConnection(DhprDBConnection))
             {
                 con.Open();
@@ -1985,7 +1979,7 @@ namespace dhprWebApi.AppCode
                                     	item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
                                     	item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
                                     	item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
-					item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
+					                    item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
 
                                     	items.Add(item);
                                 }
@@ -1994,7 +1988,7 @@ namespace dhprWebApi.AppCode
                     }
                     catch (Exception ex)
                     {
-                        string errorMessages = string.Format("DbConnection.cs - GetAllXrefOutcome()");
+                        string errorMessages = string.Format("DbConnection.cs - GetAllXref()");
                         ExceptionHelper.LogException(ex, errorMessages);
                     }
                     finally
@@ -2009,15 +2003,8 @@ namespace dhprWebApi.AppCode
         public Xref GetXrefById(int id)
         {
             var item = new Xref();
-            string commandText = "SELECT * FROM XREF WHERE";
-            if (this.Lang.Equals("fr"))
-            {
-                commandText += " LANGUAGE = 'fr' AND";
-            }
-            else {
-                commandText += " LANGUAGE ='en' AND";
-            }
-            commandText += " ID = @id";
+            string commandText = "SELECT * FROM XREF WHERE ID = @id";
+            
             using (NpgsqlConnection con = new NpgsqlConnection(DhprDBConnection))
             {
                 con.Open();
@@ -2033,8 +2020,8 @@ namespace dhprWebApi.AppCode
                                 {
                                 	item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
                                 	item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
-                                    	item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
-					item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
+                                    item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
+					                item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
                                 }
                             }
                         }

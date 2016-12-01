@@ -232,6 +232,7 @@
     <Compile Include="Controllers\ProductMonographController.cs" />
     <Compile Include="Controllers\RouteController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\XrefController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,12 +287,15 @@
     <Compile Include="Models\IPharmFormRepository.cs" />
     <Compile Include="Models\IProductMonographRepository.cs" />
     <Compile Include="Models\IRouteRepository.cs" />
+    <Compile Include="Models\IXrefRepository.cs" />
     <Compile Include="Models\PharmForm.cs" />
     <Compile Include="Models\PharmFormRepository.cs" />
     <Compile Include="Models\ProductMonograph.cs" />
     <Compile Include="Models\ProductMonographRepository.cs" />
     <Compile Include="Models\Route.cs" />
     <Compile Include="Models\RouteRepository.cs" />
+    <Compile Include="Models\Xref.cs" />
+    <Compile Include="Models\XrefRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -356,7 +360,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="js\jquery.xdomainrequest.min.js" />
-    <Content Include="js\dhpr.js" />
     <Content Include="Libraries\GoC.WebTemplateMVC.dll" />
     <Content Include="Libraries\Npgsql.dll" />
     <Content Include="Libraries\WebTemplateCore.dll" />
