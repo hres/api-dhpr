@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace dhprWebApi.Models
 {
-    interface IAerReactionTermsRepository
+    interface IAerReactionTermRepository
     {
-        IEnumerable<AerReactionTerms> GetAll(string lang);
-        AerReactionTerms Get(int id, string lang);
+        IEnumerable<AerReactionTerm> GetAll(string lang);
+        AerReactionTerm Get(int id, string lang);
     }
 }

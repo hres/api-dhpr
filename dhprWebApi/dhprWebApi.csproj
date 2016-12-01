@@ -218,7 +218,7 @@
     <Compile Include="Controllers\AerLinkController.cs" />
     <Compile Include="Controllers\AerOutcomeController.cs" />
     <Compile Include="Controllers\AerProductInformationController.cs" />
-    <Compile Include="Controllers\AerReactionTermsController.cs" />
+    <Compile Include="Controllers\AerReactionTermController.cs" />
     <Compile Include="Controllers\AerReportTypeController.cs" />
     <Compile Include="Controllers\AerSeriousController.cs" />
     <Compile Include="Controllers\AerSourceController.cs" />
@@ -250,8 +250,8 @@
     <Compile Include="Models\AerOutcomeRepository.cs" />
     <Compile Include="Models\AerProductInformation.cs" />
     <Compile Include="Models\AerProductInformationRepository.cs" />
-    <Compile Include="Models\AerReactionTerms.cs" />
-    <Compile Include="Models\AerReactionTermsRepository.cs" />
+    <Compile Include="Models\AerReactionTerm.cs" />
+    <Compile Include="Models\AerReactionTermRepository.cs" />
     <Compile Include="Models\AerReportType.cs" />
     <Compile Include="Models\AerReportTypeRepository.cs" />
     <Compile Include="Models\AerRepository.cs" />
@@ -274,7 +274,7 @@
     <Compile Include="Models\IAerLinkRepository.cs" />
     <Compile Include="Models\IAerOutcomeRepository.cs" />
     <Compile Include="Models\IAerProductInformationRepository.cs" />
-    <Compile Include="Models\IAerReactionTermsRepository.cs" />
+    <Compile Include="Models\IAerReactionTermRepository.cs" />
     <Compile Include="Models\IAerReportTypeRepository.cs" />
     <Compile Include="Models\IAerRepository.cs" />
     <Compile Include="Models\IAerSeriousRepository.cs" />

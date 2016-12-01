@@ -5,7 +5,7 @@ using System.Web;
 
 namespace dhprWebApi.Models
 {
-    public class AerReactionTerms
+    public class AerReactionTerm
     {
         public int id { get; set; }
 		public int report_id { get; set; }

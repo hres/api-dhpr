@@ -207,9 +207,9 @@ namespace dhprWebApi.AppCode
             return item;
         }
 
-        public List<AerReactionTerms> GetAllAerReactionTerms()
+        public List<AerReactionTerm> GetAllAerReactionTerm()
         {
-            var items = new List<AerReactionTerms>();
+            var items = new List<AerReactionTerm>();
             string commandText = "SELECT DISTINCT * FROM AER_REACTION_TERMS";
             if (this.Lang.Equals("fr"))
             {
@@ -230,7 +230,7 @@ namespace dhprWebApi.AppCode
                             {
                                 while (dr.Read())
                                 {
-                                    var item = new AerReactionTerms();
+                                    var item = new AerReactionTerm();
                                     item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
                                     item.report_id = dr["REPORTID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["REPORTID"]);
                                     item.adverse_reaction_terms = dr["ADVERSEREACTIONTERMS"] == DBNull.Value ? string.Empty : dr["ADVERSEREACTIONTERMS"].ToString().Trim();
@@ -259,9 +259,9 @@ namespace dhprWebApi.AppCode
             return items;
         }
 
-        public AerReactionTerms GetAerReactionTermsById(int id)
+        public AerReactionTerm GetAerReactionTermById(int id)
         {
-            var item = new AerReactionTerms();
+            var item = new AerReactionTerm();
             string commandText = "SELECT * FROM AER_REACTION_TERMS WHERE";
             if (this.Lang.Equals("fr"))
             {
