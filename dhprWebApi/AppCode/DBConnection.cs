@@ -1957,6 +1957,101 @@ namespace dhprWebApi.AppCode
             }
             return item;
         }
+        
+        public List<Xref> GetAllXref()
+        {
+            var items = new List<Xref>();
+            string commandText = "SELECT DISTINCT * FROM XREF";
+            if (this.Lang.Equals("fr"))
+            {
+                commandText += " WHERE LANGUAGE = 'fr'";
+            }
+            else {
+                commandText += " WHERE LANGUAGE ='en'";
+            }
+            using (NpgsqlConnection con = new NpgsqlConnection(DhprDBConnection))
+            {
+                con.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(commandText, con))
+                    try
+                    {
+                        using (NpgsqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                while (dr.Read())
+                                {
+                                    	var item = new Xref();
+                                    	item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
+                                    	item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
+                                    	item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
+					item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
+
+                                    	items.Add(item);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        string errorMessages = string.Format("DbConnection.cs - GetAllXrefOutcome()");
+                        ExceptionHelper.LogException(ex, errorMessages);
+                    }
+                    finally
+                    {
+                        if (con.State == ConnectionState.Open)
+                            con.Close();
+                    }
+            }
+            return items;
+        }
+
+        public Xref GetXrefById(int id)
+        {
+            var item = new Xref();
+            string commandText = "SELECT * FROM XREF WHERE";
+            if (this.Lang.Equals("fr"))
+            {
+                commandText += " LANGUAGE = 'fr' AND";
+            }
+            else {
+                commandText += " LANGUAGE ='en' AND";
+            }
+            commandText += " ID = @id";
+            using (NpgsqlConnection con = new NpgsqlConnection(DhprDBConnection))
+            {
+                con.Open();
+                using (NpgsqlCommand cmd = new NpgsqlCommand(commandText, con))
+                    try
+                    {
+                        cmd.Parameters.AddWithValue("@id", id);
+                        using (NpgsqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                while (dr.Read())
+                                {
+                                	item.id = dr["ID"] == DBNull.Value ? 0 : Convert.ToInt32(dr["ID"]);
+                                	item.cvp_name = dr["CVP_NAME"] == DBNull.Value ? string.Empty : dr["CVP_NAME"].ToString().Trim();
+                                    	item.dhpr_name = dr["DHPR_NAME"] == DBNull.Value ? string.Empty : dr["DHPR_NAME"].ToString().Trim();
+					item.submit_date = dr["SUBMIT_DATE"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(dr["SUBMIT_DATE"]);
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        string errorMessages = string.Format("DbConnection.cs - GetXrefById()");
+                        ExceptionHelper.LogException(ex, errorMessages);
+                    }
+                    finally
+                    {
+                        if (con.State == ConnectionState.Open)
+                            con.Close();
+                    }
+            }
+            return item;
+        }
 
     }
 }
