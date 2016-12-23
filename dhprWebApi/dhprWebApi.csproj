@@ -363,6 +363,7 @@
     <Content Include="Libraries\GoC.WebTemplateMVC.dll" />
     <Content Include="Libraries\Npgsql.dll" />
     <Content Include="Libraries\WebTemplateCore.dll" />
+    <Content Include="main-en.html" />
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="StaticFallbackFiles\gcweb\footer-en.html" />
     <Content Include="StaticFallbackFiles\gcweb\footer-fr.html" />

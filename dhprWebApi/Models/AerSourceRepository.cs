@@ -8,7 +8,7 @@ namespace dhprWebApi.Models
         private List<AerSource> aersources = new List<AerSource>();
         private AerSource aersource = new AerSource();
 
-        DBConnection dbConnection = new DBConnection("en");
+       
 
 
         public IEnumerable<AerSource> GetAll(string lang)
