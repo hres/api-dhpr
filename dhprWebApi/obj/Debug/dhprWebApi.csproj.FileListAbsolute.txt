@@ -96,3 +96,10 @@ C:\Web API App\api-dhpr\dhprWebApi\bin\zh-Hans\System.Spatial.resources.dll
 C:\Web API App\api-dhpr\dhprWebApi\bin\zh-Hant\System.Spatial.resources.dll
 C:\Web API App\api-dhpr\dhprWebApi\obj\Debug\dhprWebApi.dll
 C:\Web API App\api-dhpr\dhprWebApi\obj\Debug\dhprWebApi.pdb
+C:\Workspace_API\api-dhpr\dhprWebApi\obj\Debug\dhprWebApi.csproj.App.config
+C:\Workspace_API\api-dhpr\dhprWebApi\obj\Debug\dhprWebApi.csprojResolveAssemblyReference.cache
+C:\Workspace_API\api-dhpr\dhprWebApi\obj\Debug\dhprWebApi.dll
+C:\Workspace_API\api-dhpr\dhprWebApi\obj\Debug\dhprWebApi.pdb
+C:\Workspace_API\api-dhpr\dhprWebApi\bin\dhprWebApi.dll.config
+C:\Workspace_API\api-dhpr\dhprWebApi\bin\dhprWebApi.dll
+C:\Workspace_API\api-dhpr\dhprWebApi\bin\dhprWebApi.pdb
